@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "mattmod",
+  "version": "${version}",
+
+  "name": "We Learn Shit Mod",
+  "description": "This is an example description! Tell everyone what your mod is about!",
+  "authors": [
+    "Matthew Vandenberg",
+    "Chris Quesada"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "MIT",
+  "icon": "assets/modid/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.kwikmatt.mattmod.TutorialMod"
+    ]
+  },
+  "mixins": [
+    "mattmod.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.18.x",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
