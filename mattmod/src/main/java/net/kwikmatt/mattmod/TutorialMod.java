@@ -1,10 +1,9 @@
 package net.kwikmatt.mattmod;
 
 import net.fabricmc.api.ModInitializer;
+import net.kwikmatt.mattmod.block.MattBlocks;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import net.kwikmatt.mattmod.blocks.*;
 
 public class TutorialMod implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
@@ -12,11 +11,6 @@ public class TutorialMod implements ModInitializer {
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final String MOD_ID = "mattmod";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-	public static final MattBlock[] blocks =
-	{
-			new MattBlock("blocktest"),
-			new MattBlock("testblock")
-	};
 
 
 	@Override
@@ -24,9 +18,7 @@ public class TutorialMod implements ModInitializer {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution
-		for (MattBlock block: blocks) {
-			block.addToGame();
-		}
+		MattBlocks.registerModItems();
 		LOGGER.info("Hello Fabric world!");
 	}
 }
