@@ -2,5 +2,7 @@
   "item.mattmod.crimson_orb" : "Crimson Orb",
 
   "block.mattmod.cringe" : "Cringe Block",
-  "block.mattmod.crimson" : "Crimson Block"
+  "block.mattmod.crimson" : "Crimson Block",
+
+  "itemGroup.mattmod.customgroup" : "Matt Mod"
 }
