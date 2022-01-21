@@ -2,6 +2,7 @@ package net.kwikmatt.mattmod;
 
 import net.fabricmc.api.ModInitializer;
 import net.kwikmatt.mattmod.block.MattBlocks;
+import net.kwikmatt.mattmod.item.MattItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,6 +20,7 @@ public class TutorialMod implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution
 		MattBlocks.registerModItems();
+		MattItems.registerModItems();
 		LOGGER.info("Hello Fabric world!");
 	}
 }
