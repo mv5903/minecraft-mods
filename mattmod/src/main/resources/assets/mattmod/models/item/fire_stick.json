@@ -1,0 +1,6 @@
+{
+  "parent" : "item/handheld",
+  "textures" : {
+    "layer0" : "mattmod:item/fire_stick"
+  }
+}

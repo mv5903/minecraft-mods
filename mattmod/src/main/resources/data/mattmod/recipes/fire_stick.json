@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " X",
+    "# "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": [
+      {
+        "item": "mattmod:crimson_orb"
+      }
+    ]
+  },
+  "result": {
+    "item": "mattmod:fire_stick",
+    "count": 1
+  }
+}
