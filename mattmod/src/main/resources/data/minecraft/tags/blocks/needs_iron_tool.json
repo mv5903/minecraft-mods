@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "mattmod:crimson"
+    "mattmod:crimson",
+    "mattmod:crimson_ore"
   ]
 }

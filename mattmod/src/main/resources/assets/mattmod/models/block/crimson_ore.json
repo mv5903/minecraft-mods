@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "mattmod:block/crimson"
+    "all": "mattmod:block/crimson_ore"
   }
 }
