@@ -1,10 +1,13 @@
 {
   "item.mattmod.crimson_orb" : "Crimson Orb",
   "item.mattmod.fire_stick" : "Fire Stick",
+  "item.mattmod.cursed_bread" : "Cursed Bread",
 
   "block.mattmod.cringe" : "Cringe Block",
   "block.mattmod.crimson" : "Crimson Block",
   "block.mattmod.crimson_ore" : "Crimson Ore",
 
-  "itemGroup.mattmod.customgroup" : "Matt Mod"
+  "itemGroup.mattmod.customgroup" : "Matt Mod",
+
+  "enchantment.mattmod.jewish_curse" : "Curse of Jewish"
 }

@@ -4,7 +4,9 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.kwikmatt.mattmod.block.MattBlocks;
+import net.kwikmatt.mattmod.enchantment.JewishCurseEnchantment;
 import net.kwikmatt.mattmod.item.MattItems;
+import net.kwikmatt.mattmod.world.gen.feature.ModdedOreConfiguredFeatures;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
@@ -23,24 +25,17 @@ public class TutorialMod implements ModInitializer {
 	public static final String MOD_ID = "mattmod";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
+	private static JewishCurseEnchantment JEWISH_ENCHANTMENT = Registry.register(
+			Registry.ENCHANTMENT,
+			new Identifier("mattmod", "jewish_curse"),
+			new JewishCurseEnchantment()
+	);
 
 	@Override
 	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution
 		MattBlocks.registerModItems();
 		MattItems.registerModItems();
-
-		//write method in ModdedOreConfiguredFeatures class so that all we have to do is register the features using a method like the ones above instead of using all the lines below
-		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,
-				new Identifier(TutorialMod.MOD_ID, "crimson_ore"), CRIMSON_ORE_CONFIGURED_FEATURE);
-		Registry.register(BuiltinRegistries.PLACED_FEATURE, new Identifier(TutorialMod.MOD_ID, "crimson_ore"),
-				CRIMSON_ORE_PLACED_FEATURE);
-		BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_ORES,
-				RegistryKey.of(Registry.PLACED_FEATURE_KEY,
-						new Identifier(TutorialMod.MOD_ID, "crimson_ore")));
-
+		ModdedOreConfiguredFeatures.registerFeatures();
 
 		LOGGER.info("Hello Fabric world!");
 	}

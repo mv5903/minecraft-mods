@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:bread"
+    },
+    "X": [
+      {
+        "item": "mattmod:crimson_orb"
+      }
+    ]
+  },
+  "result": {
+    "item": "mattmod:cursed_bread",
+    "count": 1
+  }
+}

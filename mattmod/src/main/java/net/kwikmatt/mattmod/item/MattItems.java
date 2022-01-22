@@ -4,6 +4,9 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.kwikmatt.mattmod.ModItemGroup;
 import net.kwikmatt.mattmod.TutorialMod;
 import net.kwikmatt.mattmod.item.custom.FireStickItem;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
@@ -16,6 +19,8 @@ public class MattItems {
 
     public static final Item FIRE_STICK = registerItem("fire_stick",
             new FireStickItem(new FabricItemSettings().group(ModItemGroup.MATT_GROUP).maxDamage(128)));
+
+    public static final Item CURSED_BREAD = registerItem("cursed_bread", new Item(new FabricItemSettings().food(new FoodComponent.Builder().hunger(2).saturationModifier(9f).statusEffect(new StatusEffectInstance(StatusEffects.POISON, 100, 0), 1.0f).build())));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(TutorialMod.MOD_ID, name), item);

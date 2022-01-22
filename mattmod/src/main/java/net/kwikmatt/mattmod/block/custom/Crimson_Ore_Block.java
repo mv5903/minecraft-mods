@@ -18,7 +18,9 @@ import net.minecraft.world.GameRules;
 
 public class Crimson_Ore_Block extends Block {
 
-    public Crimson_Ore_Block(Settings settings) {super(settings);}
+    public Crimson_Ore_Block(Settings settings) {
+        super(settings);
+    }
 
     @Override
     public void onStacksDropped(BlockState state, ServerWorld world, BlockPos pos, ItemStack stack) {
