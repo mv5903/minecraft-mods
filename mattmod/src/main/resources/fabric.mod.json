@@ -20,7 +20,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.kwikmatt.mattmod.TutorialMod"
+      "net.kwikmatt.mattmod.MattMod"
+    ],
+    "client": [
+      "net.kwikmatt.mattmod.MattModClient"
     ]
   },
   "mixins": [

@@ -1,6 +1,6 @@
 package net.kwikmatt.mattmod.mixin;
 
-import net.kwikmatt.mattmod.TutorialMod;
+import net.kwikmatt.mattmod.MattMod;
 import net.minecraft.client.gui.screen.TitleScreen;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -11,6 +11,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class ExampleMixin {
 	@Inject(at = @At("HEAD"), method = "init()V")
 	private void init(CallbackInfo info) {
-		TutorialMod.LOGGER.info("This line is printed by an example mod mixin!");
+		MattMod.LOGGER.info("This line is printed by an example mod mixin!");
 	}
 }

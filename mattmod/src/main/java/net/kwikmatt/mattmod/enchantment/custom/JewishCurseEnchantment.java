@@ -1,4 +1,4 @@
-package net.kwikmatt.mattmod.enchantment;
+package net.kwikmatt.mattmod.enchantment.custom;
 
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;

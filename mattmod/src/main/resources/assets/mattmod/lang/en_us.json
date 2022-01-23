@@ -6,8 +6,9 @@
   "block.mattmod.cringe" : "Cringe Block",
   "block.mattmod.crimson" : "Crimson Block",
   "block.mattmod.crimson_ore" : "Crimson Ore",
+  "block.mattmod.box_block" : "Jewish Trashcan",
 
-  "itemGroup.mattmod.customgroup" : "Matt Mod",
+  "itemGroup.mattmod.mattgroup" : "Matt Mod",
 
   "enchantment.mattmod.jewish_curse" : "Curse of Jewish"
 }
