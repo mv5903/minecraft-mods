@@ -3,10 +3,10 @@ package net.kwikmatt.mattmod.block;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.kwikmatt.mattmod.MattMod;
-import net.kwikmatt.mattmod.group.ModItemGroup;
 import net.kwikmatt.mattmod.block.custom.Crimson_Ore_Block;
-import net.kwikmatt.mattmod.entity.MattEntities;
+import net.kwikmatt.mattmod.group.ModItemGroup;
 import net.kwikmatt.mattmod.inventory.MattBoxBlock;
+import net.kwikmatt.mattmod.misc.MattIdentifiers;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
@@ -30,7 +30,7 @@ public class MattBlocks {
     public static final Block CRIMSON_BLOCK = registerBlock("crimson", new Block(FabricBlockSettings.of(Material.METAL).strength(6f).requiresTool().sounds(BlockSoundGroup.NETHERITE).lightLevel((5))), ModItemGroup.MATT_GROUP);
     public static final Block CRINGE_BLOCK = registerBlock("cringe", new Block(FabricBlockSettings.of(Material.METAL).strength(10f).requiresTool()), ModItemGroup.MATT_GROUP);
     public static final Block CRIMSON_ORE = registerBlock("crimson_ore", new Crimson_Ore_Block(FabricBlockSettings.of(Material.STONE).strength(2f).requiresTool().sounds(BlockSoundGroup.NETHER_GOLD_ORE)), ModItemGroup.MATT_GROUP);
-    public static final Block JEWISH_TRASHCAN = Registry.register(Registry.BLOCK, MattEntities.BOX, new MattBoxBlock(FabricBlockSettings.copyOf(Blocks.CHEST)));
+    public static final Block JEWISH_TRASHCAN = Registry.register(Registry.BLOCK, MattIdentifiers.JEWISH_TRASHCAN, new MattBoxBlock(FabricBlockSettings.copyOf(Blocks.CHEST)));
 
     /**
      * Actively registers the block into the game. Called automatically from the above block constants.

@@ -31,11 +31,12 @@ public class MattMod implements ModInitializer {
 	 * Helper for cleaner code. Makes all method calls to all classes to register their items.
 	 */
 	private void initItems() {
+		MattEntities.registerEntities();
 		MattBlocks.registerModItems();
 		MattItems.registerModItems();
 		ModdedOreConfiguredFeatures.registerFeatures();
 		MattEnchantments.registerModEnchantments();
-		MattEntities.registerEntities();
+
 	}
 
 }
