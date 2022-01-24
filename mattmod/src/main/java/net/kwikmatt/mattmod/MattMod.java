@@ -19,6 +19,7 @@ public class MattMod implements ModInitializer {
 	public static final String MOD_ID = "mattmod";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
+
 	/**
 	 * The "main method" of the minecraft server fabric instance.
 	 */

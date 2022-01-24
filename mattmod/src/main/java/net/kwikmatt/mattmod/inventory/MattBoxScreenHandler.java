@@ -53,6 +53,7 @@ public class MattBoxScreenHandler extends ScreenHandler {
             this.addSlot(new Slot(playerInventory, m, 8 + m * 18, 142));
         }
 
+
     }
 
     @Override

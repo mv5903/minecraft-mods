@@ -3,6 +3,7 @@ package net.kwikmatt.mattmod.inventory;
 import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.BlockWithEntity;
+import net.minecraft.block.ShapeContext;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventory;
@@ -13,6 +14,9 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.util.shape.VoxelShapes;
+import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
 public class MattBoxBlock extends BlockWithEntity {
@@ -40,6 +44,7 @@ public class MattBoxBlock extends BlockWithEntity {
 
             if (screenHandlerFactory != null) {
                 //With this call the server will request the client to open the appropriate Screenhandler
+
                 player.openHandledScreen(screenHandlerFactory);
             }
         }
@@ -70,4 +75,11 @@ public class MattBoxBlock extends BlockWithEntity {
     public int getComparatorOutput(BlockState state, World world, BlockPos pos) {
         return ScreenHandler.calculateComparatorOutput(world.getBlockEntity(pos));
     }
+
+    @Override
+    public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, ShapeContext context) {
+        return VoxelShapes.cuboid(0f, 0f, 0f, 1.0f, 1.0f, 1.0f);
+    }
+
+
 }

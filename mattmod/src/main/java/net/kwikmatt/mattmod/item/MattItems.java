@@ -11,7 +11,6 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -32,7 +31,7 @@ public class MattItems {
     public static final BlockItem JEWISH_TRASHCAN_ITEM;
 
     static {
-        JEWISH_TRASHCAN_ITEM = Registry.register(Registry.ITEM, MattIdentifiers.JEWISH_TRASHCAN, new BlockItem(MattBlocks.JEWISH_TRASHCAN, new Item.Settings().group(ItemGroup.MISC)));
+        JEWISH_TRASHCAN_ITEM = Registry.register(Registry.ITEM, MattIdentifiers.JEWISH_TRASHCAN, new BlockItem(MattBlocks.JEWISH_TRASHCAN, new Item.Settings().group(ModItemGroup.MATT_GROUP)));
     }
 
     private static Item registerItem(String name, Item item) {
