@@ -17,7 +17,7 @@ import net.minecraft.util.math.BlockPos;
 import org.jetbrains.annotations.NotNull;
 
 public class MattBoxBlockEntity extends BlockEntity implements NamedScreenHandlerFactory, ImplementedInventory {
-    private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(9, ItemStack.EMPTY);
+    private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(54, ItemStack.EMPTY);
 
     public MattBoxBlockEntity(BlockPos pos, BlockState state) {
         super(MattEntities.JEWISH_TRASHCAN_ENTITY, pos, state);

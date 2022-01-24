@@ -20,14 +20,14 @@ public class MattBoxScreenHandler extends ScreenHandler {
     //sync this empty inventory with the inventory on the server.
 
     public MattBoxScreenHandler(int syncId, PlayerInventory playerInventory) {
-        this(syncId, playerInventory, new SimpleInventory(9));
+        this(syncId, playerInventory, new SimpleInventory(54));
     }
 
     //This constructor gets called from the BlockEntity on the server without calling the other constructor first, the server knows the inventory of the container
     //and can therefore directly provide it as an argument. This inventory will then be synced to the client.
     public MattBoxScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory) {
         super(MattEntities.BOX_SCREEN_HANDLER, syncId);
-        checkSize(inventory, 9);
+        checkSize(inventory, 54);
         this.inventory = inventory;
         //some inventories do custom logic when a player opens it.
         inventory.onOpen(playerInventory.player);

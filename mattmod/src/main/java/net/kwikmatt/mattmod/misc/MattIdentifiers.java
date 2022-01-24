@@ -7,4 +7,6 @@ public class MattIdentifiers {
     // Identifiers get loaded here
 
     public static final Identifier JEWISH_TRASHCAN = new Identifier(MattMod.MOD_ID, "jewish_trashcan");
+
+    public static void registerIdentifiers() {}
 }

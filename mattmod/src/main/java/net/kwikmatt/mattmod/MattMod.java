@@ -5,6 +5,7 @@ import net.kwikmatt.mattmod.block.MattBlocks;
 import net.kwikmatt.mattmod.enchantment.MattEnchantments;
 import net.kwikmatt.mattmod.entity.MattEntities;
 import net.kwikmatt.mattmod.item.MattItems;
+import net.kwikmatt.mattmod.misc.MattIdentifiers;
 import net.kwikmatt.mattmod.world.gen.feature.ModdedOreConfiguredFeatures;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,12 +32,12 @@ public class MattMod implements ModInitializer {
 	 * Helper for cleaner code. Makes all method calls to all classes to register their items.
 	 */
 	private void initItems() {
+		MattIdentifiers.registerIdentifiers();
 		MattEntities.registerEntities();
 		MattBlocks.registerModItems();
 		MattItems.registerModItems();
 		ModdedOreConfiguredFeatures.registerFeatures();
 		MattEnchantments.registerModEnchantments();
-
 	}
 
 }
