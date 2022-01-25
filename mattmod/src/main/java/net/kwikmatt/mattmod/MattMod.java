@@ -1,7 +1,9 @@
 package net.kwikmatt.mattmod;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.command.v1.CommandRegistrationCallback;
 import net.kwikmatt.mattmod.block.MattBlocks;
+import net.kwikmatt.mattmod.command.MattTimer;
 import net.kwikmatt.mattmod.enchantment.MattEnchantments;
 import net.kwikmatt.mattmod.entity.MattEntities;
 import net.kwikmatt.mattmod.item.MattItems;
@@ -23,6 +25,8 @@ public class MattMod implements ModInitializer {
 	/**
 	 * The "main method" of the minecraft server fabric instance.
 	 */
+
+
 	@Override
 	public void onInitialize() {
 		initItems();
@@ -39,6 +43,16 @@ public class MattMod implements ModInitializer {
 		MattItems.registerModItems();
 		ModdedOreConfiguredFeatures.registerFeatures();
 		MattEnchantments.registerModEnchantments();
+		registerCommands();
 	}
+
+	private void registerCommands() {
+		CommandRegistrationCallback.EVENT.register((dispatcher, dedicated) -> {
+			MattTimer.registerMattCommand(dispatcher);
+		});
+	}
+
+
+
 
 }
