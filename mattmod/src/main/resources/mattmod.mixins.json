@@ -2,8 +2,9 @@
   "required": true,
   "minVersion": "0.8",
   "package": "net.kwikmatt.mattmod.mixin",
-  "compatibilityLevel": "JAVA_16",
+  "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "ExampleMixin"
   ],
   "client": [
     "ExampleMixin"

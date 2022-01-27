@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "mattmod",
-  "version": "${version}",
+  "version": "1.0",
 
   "name": "We Learn Shit Mod",
   "description": "This is an example description! Tell everyone what your mod is about!",

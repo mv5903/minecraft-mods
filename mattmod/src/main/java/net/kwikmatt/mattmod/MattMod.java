@@ -47,12 +47,8 @@ public class MattMod implements ModInitializer {
 	}
 
 	private void registerCommands() {
-		CommandRegistrationCallback.EVENT.register((dispatcher, dedicated) -> {
-			MattTimer.registerMattCommand(dispatcher);
-		});
+		CommandRegistrationCallback.EVENT.register(MattTimer::register);
 	}
-
-
 
 
 }
