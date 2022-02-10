@@ -30,6 +30,7 @@ public class MattMod implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		initItems();
+		CommandRegistrationCallback.EVENT.register(((dispatcher, dedicated) -> MattTimer.register(dispatcher, true)));
 		LOGGER.info("Hello Fabric world from Mattmod!");
 	}
 
@@ -47,7 +48,7 @@ public class MattMod implements ModInitializer {
 	}
 
 	private void registerCommands() {
-		CommandRegistrationCallback.EVENT.register(MattTimer::register);
+
 	}
 
 

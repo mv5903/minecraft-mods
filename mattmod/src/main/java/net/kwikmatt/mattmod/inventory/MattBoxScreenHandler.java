@@ -12,6 +12,7 @@ import net.minecraft.screen.slot.Slot;
 /**
  * Draws UI objects onto the screen and makes them interactable, such as inventories.
  */
+
 public class MattBoxScreenHandler extends ScreenHandler {
     private final Inventory inventory;
 

@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "id": "mattmod",
-  "version": "1.0",
+  "version": "1.0.1",
 
-  "name": "We Learn Shit Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Matt Mod",
+  "description": "Matt Mod for Testing Stuff Out",
   "authors": [
     "Matthew Vandenberg",
     "Chris Quesada"
