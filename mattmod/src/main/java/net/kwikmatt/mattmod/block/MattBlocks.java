@@ -7,6 +7,7 @@ import net.kwikmatt.mattmod.block.custom.Crimson_Ore_Block;
 import net.kwikmatt.mattmod.group.ModItemGroup;
 import net.kwikmatt.mattmod.inventory.MattBoxBlock;
 import net.kwikmatt.mattmod.misc.MattIdentifiers;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
@@ -31,6 +32,7 @@ public class MattBlocks {
     public static final Block CRINGE_BLOCK = registerBlock("cringe", new Block(FabricBlockSettings.of(Material.METAL).strength(10f).requiresTool()), ModItemGroup.MATT_GROUP);
     public static final Block CRIMSON_ORE = registerBlock("crimson_ore", new Crimson_Ore_Block(FabricBlockSettings.of(Material.STONE).strength(2f).requiresTool().sounds(BlockSoundGroup.NETHER_GOLD_ORE)), ModItemGroup.MATT_GROUP);
     public static final Block JEWISH_TRASHCAN = Registry.register(Registry.BLOCK, MattIdentifiers.JEWISH_TRASHCAN, new MattBoxBlock(FabricBlockSettings.copyOf(Blocks.CHEST).nonOpaque()));
+    public static final Block FAKE_BEDROCK = registerBlock("fake_bedrock", new Block(AbstractBlock.Settings.copy(Blocks.BEDROCK)), ModItemGroup.MATT_GROUP);
 
     /**
      * Actively registers the block into the game. Called automatically from the above block constants.

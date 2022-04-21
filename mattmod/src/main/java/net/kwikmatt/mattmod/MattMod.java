@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v1.CommandRegistrationCallback;
 import net.kwikmatt.mattmod.block.MattBlocks;
 import net.kwikmatt.mattmod.command.MattTimer;
+import net.kwikmatt.mattmod.command.OneBlock;
 import net.kwikmatt.mattmod.enchantment.MattEnchantments;
 import net.kwikmatt.mattmod.entity.MattEntities;
 import net.kwikmatt.mattmod.item.MattItems;
@@ -31,6 +32,7 @@ public class MattMod implements ModInitializer {
 	public void onInitialize() {
 		initItems();
 		CommandRegistrationCallback.EVENT.register(((dispatcher, dedicated) -> MattTimer.register(dispatcher, true)));
+		CommandRegistrationCallback.EVENT.register(((dispatcher, dedicated) -> OneBlock.register(dispatcher, true)));
 		LOGGER.info("Hello Fabric world from Mattmod!");
 	}
 
@@ -44,12 +46,5 @@ public class MattMod implements ModInitializer {
 		MattItems.registerModItems();
 		ModdedOreConfiguredFeatures.registerFeatures();
 		MattEnchantments.registerModEnchantments();
-		registerCommands();
 	}
-
-	private void registerCommands() {
-
-	}
-
-
 }
